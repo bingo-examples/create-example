@@ -16,20 +16,26 @@
 ## Usage
 
 ```shell
-npm i create-example
+npx create-example
 ```
 
-```ts
-import { greet } from "create-example";
+This repository is a general example of using the [Bingo engine](https://create.bingo).
+Its `src/template.ts` file describes a repository with four string options:
 
-greet("Hello, world! 💖");
+- `description`: 'Sentence case.' description of the repository, with a hardcoded value
+- `owner`: GitHub organization or user the repository is underneath
+- `repository`: 'kebab-case' or 'PascalCase' title of the repository
+- `title`: 'Title Case' title for the repository, with a default value based on title-casing `repository`
+
+The following command was used to generate [bingo/created-example](https://github.com/created-example):
+
+```shell
+npx create-example --owner bingo-examples --repository created-example
 ```
 
 ## Development
 
 See [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md), then [`.github/DEVELOPMENT.md`](./.github/DEVELOPMENT.md).
 Thanks! 💖
-
-<!-- You can remove this notice if you don't want it 🙂 no worries! -->
 
 > 💝 This package was templated with [`create-typescript-app`](https://github.com/JoshuaKGoldberg/create-typescript-app) using the [Bingo engine](https://create.bingo).

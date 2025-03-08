@@ -16,7 +16,9 @@ export default tseslint.config(
 		files: ["**/*.js", "**/*.ts"],
 		languageOptions: {
 			parserOptions: {
-				projectService: { allowDefaultProject: ["*.config.*s"] },
+				projectService: {
+					allowDefaultProject: ["*.config.*s", "bin/index.js"],
+				},
 				tsconfigRootDir: import.meta.dirname,
 			},
 		},
@@ -25,6 +27,5 @@ export default tseslint.config(
 	{
 		extends: [vitest.configs.recommended],
 		files: ["**/*.test.*"],
-		rules: { "@typescript-eslint/no-unsafe-assignment": "off" },
 	},
 );
