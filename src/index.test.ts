@@ -5,6 +5,12 @@ import { template } from "./index.js";
 
 describe("template", () => {
 	describe("options", () => {
+		it("does not set a title when repository is not provided", async () => {
+			const actual = await testOptions(template);
+
+			expect(actual).toEqual({});
+		});
+
 		it("bases title on repository when title is not provided", async () => {
 			const repository = "abc-def";
 
